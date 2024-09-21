@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@100..900&display=swap");
+
+* {
+  font-family: "Jua", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.container {
+  width: 700px;
+  height: 700px;
+  background-image: url("https://www.urbanbrush.net/web/wp-content/uploads/edd/2018/11/urbanbrush-20181126105719789335.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  padding: 20px 20px;
+  box-shadow: 5px 5px 10px 5px #b7bec3;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+.lotto-generator {
+  position: relative;
+  width: 100%;
+}
+.title {
+  display: flex;
+  justify-content: center;
+}
+.button-area {
+  display: flex;
+  justify-content: center;
+}
+
+#generateBtn {
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  border: dashed 3px black;
+  animation: glow-border 1.5s infinite alternate;
+}
+
+@keyframes glow-border {
+  0% {
+    /* 애니메이션 시작지점 */
+    border-color: white;
+  }
+  25% {
+    border-color: red;
+  }
+  50% {
+    /* 애니메이션 중간 시점 */
+    border-color: black;
+  }
+  75% {
+    border-color: blue;
+  }
+  100% {
+    /* 애니메이션 종료 시점 */
+    border-color: white;
+  }
+}
+
+.num-area {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  justify-content: center;
+}
+
+#numbers {
+  font-size: 50px;
+  color: black; /* 글자 색상 */
+  text-shadow: -1px -1px 0 white, /* 위 왼쪽 */ 1px -1px 0 white,
+    /* 위 오른쪽 */ -1px 1px 0 white, /* 아래 왼쪽 */ 1px 1px 0 white; /* 아래 오른쪽 */
+}
+
+/* 이전 번호 */
+.prev-container {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 150px;
+  background-color: rgb(242, 220, 27);
+  border-radius: 20px;
+  padding: 20px 20px;
+  box-shadow: 5px 5px 10px 5px #b7bec3;
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.prev-num {
+  font-size: 30px;
+  color: black; /* 글자 색상 */
+  text-shadow: -1px -1px 0 white, /* 위 왼쪽 */ 1px -1px 0 white,
+    /* 위 오른쪽 */ -1px 1px 0 white, /* 아래 왼쪽 */ 1px 1px 0 white; /* 아래 오른쪽 */
+}
